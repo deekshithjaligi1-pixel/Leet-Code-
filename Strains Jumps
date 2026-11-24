@@ -1,0 +1,18 @@
+class Solution {
+    public int totalJumps(int[] arr, int x, int y) {
+    int jumps = 0;
+    for (int i=0;i<arr.length;i++) {
+        if (arr[i]<=x) {
+            jumps++;
+        } else {
+            int remaining = arr[i]-x;
+            jumps += 1+(remaining+(x-y)-1)/(x-y);
+          
+        }
+    }
+      return jumps;
+    }
+}
+
+
+
